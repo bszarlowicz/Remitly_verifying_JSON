@@ -45,4 +45,5 @@ function verifyJSON(filePath){
 }
 
 
+//output result
 console.log(verifyJSON('data.json'));
