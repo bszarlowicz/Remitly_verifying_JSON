@@ -19,16 +19,10 @@ This project contains a simple JavaScript script for verifying the contents of a
     git clone https://github.com/bszarlowicz/Remitly_verifying_JSON.git
     ```
 
-1. Navigate to the project directory:
+2. Navigate to the project directory:
 
     ```bash
     cd <directory-name>
-    ```
-
-2. Install the required dependencies by running:
-
-    ```bash
-    npm install
     ```
 
 3. To execute the verification script, use the command:
