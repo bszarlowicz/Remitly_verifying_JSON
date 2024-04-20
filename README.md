@@ -10,23 +10,28 @@ This project contains a simple JavaScript script for verifying the contents of a
 
 1. Clone this repository to your local machine using the command:
 
+    Via SSH:
     ```bash
-    git clone <repository-url>
+    git clone git@github.com:bszarlowicz/Remitly_verifying_JSON.git
+    ```
+    Via HTTPS:
+    ```bash
+    git clone https://github.com/bszarlowicz/Remitly_verifying_JSON.git
     ```
 
-2. Navigate to the project directory:
+1. Navigate to the project directory:
 
     ```bash
     cd <directory-name>
     ```
 
-3. Install the required dependencies by running:
+2. Install the required dependencies by running:
 
     ```bash
     npm install
     ```
 
-4. To execute the verification script, use the command:
+3. To execute the verification script, use the command:
 
     ```bash
     node verifyJSON.js
