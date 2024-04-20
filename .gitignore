@@ -1,0 +1,12 @@
+*.tmp
+*.swp
+
+node_modules/
+dist/
+
+.env
+
+*.log
+
+coverage/
+*.map
