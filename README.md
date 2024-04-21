@@ -24,11 +24,22 @@ This project contains a simple JavaScript script for verifying the contents of a
     ```bash
     cd <directory-name>
     ```
+3. Install the required dependencies by running:
 
-3. To execute the verification script, use the command:
+    ```bash
+    npm install
+    ```
+
+4. To execute the verification script, use the command:
 
     ```bash
     node verifyJSON.js
+    ```
+    
+5. To run unit tests, you can execute:
+   
+    ```bash
+    npm run test
     ```
 
 ## Description
