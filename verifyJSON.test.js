@@ -1,13 +1,16 @@
-const verifyJSON = require('./verifyJSON');
-const fs = require('fs');
+const { verifyJSON, isAWSRolePolicyValid, readJSONfile } = require('./verifyJSON');
 
-test('Verifying JSON file without "*" in "Resource" field', () => {
+it('SHOULD verify JSON file without "*" in "Resource" field', () => {
     const filePath = 'data.json';
-    expect(verifyJSON(filePath)).toBe(false);
+    const verifyJsonResult = verifyJSON(filePath)
+
+    expect(verifyJsonResult).toBe(false);
 });
 
-test('Validating AWS IAM role policy data with invalid data', () => {
+it('SHOULD validate AWS IAM role policy data with invalid data', async () => {
     const filePath = 'data.json';
-    const data = fs.readFileSync(filePath, 'utf8');
-    expect(isAWSRolePolicyValid(data.PolicyDocument, PolicyName)).toBe(true);
+    const data = readJSONfile(filePath)
+    const result = isAWSRolePolicyValid(data.PolicyDocument, data.PolicyName)
+
+    expect(result).toBe(true);
 });

@@ -33,13 +33,14 @@ function isAWSRolePolicyValid(policyDocument, policyName){
  * @returns {boolean} - A boolean value, false if the "Resource" field contains a single asterisk, true otherwise.
  */
 function verifyJSON(filePath){
-    dataJSON = readJSONfile(filePath);
+    const dataJSON = readJSONfile(filePath);
     if(isAWSRolePolicyValid(dataJSON.PolicyDocument, dataJSON.PolicyName)){
+        let result = true;
         for (const statement of dataJSON.PolicyDocument.Statement){
             if (statement.Resource === '*')
-                return false;
+                result = false;
         }
-        return true;
+        return result;
     }else
         console.error("Error: AWS IAM properties are not valid.");
 }
@@ -47,3 +48,10 @@ function verifyJSON(filePath){
 
 //output result
 console.log(verifyJSON('data.json'));
+
+module.exports = {
+    verifyJSON,
+    isAWSRolePolicyValid,
+    readJSONfile,
+  };
+  

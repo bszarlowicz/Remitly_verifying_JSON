@@ -4,7 +4,7 @@
     "description": "A simple script to verify AWS role policy JSON files.",
     "main": "verifyJSON.js",
     "scripts": {
-        "test": "jest --config /code/internship/remitly/jest.config.js"
+        "test": "jest"
     },
     "author": "Bartosz Szarlowicz",
     "license": "MIT",
@@ -13,8 +13,5 @@
     },
     "devDependencies": {
         "jest": "^29.7.0"
-    },
-    "jest": {
-        "config": "/jest.config.js"
-      }
+    }
 }
